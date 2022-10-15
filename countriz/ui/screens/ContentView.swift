@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var countriesViewModel = CountriesViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(countries) { country in
-                    CountryCell(country: country)
+                CountriesScore(viewModel: countriesViewModel)
+                ForEach(countriesViewModel.countries) { country in
+                    CountryItem(country: country, viewModel: countriesViewModel)
                 }.navigationTitle("Countries")
             }
         }
