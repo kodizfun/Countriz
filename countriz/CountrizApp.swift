@@ -11,7 +11,7 @@ import SwiftUI
 struct CountrizApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(UserSettings())
         }
     }
 }

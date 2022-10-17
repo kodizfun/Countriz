@@ -11,6 +11,7 @@ struct CountryItem: View {
     
     let country: Country
     @ObservedObject var viewModel: CountriesViewModel
+    @EnvironmentObject var userSettings: UserSettings
     @State private var expanded = false
     
     var body: some View {
@@ -20,22 +21,27 @@ struct CountryItem: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 80)
+                
                 VStack(alignment: .leading) {
                     Text(country.name).bold()
                     Text(country.code.uppercased())
                 }
-                VStack(alignment: .trailing) {
-                    Button(action: {
-                        viewModel.upgradeScore(countryToUpdate: country)
-                    }, label: {
-                        Image(systemName: "plus.circle.fill")
-                    })
-                    Button(action: {
-                        viewModel.downgradeScore(countryToUpdate: country)
-                    }, label: {
-                        Image(systemName: "minus.circle.fill")
-                    })
+                
+                if userSettings.canUpdateCountry {
+                    VStack(alignment: .trailing) {
+                        Button(action: {
+                            viewModel.upgradeScore(countryToUpdate: country)
+                        }, label: {
+                            Image(systemName: "plus.circle.fill")
+                        })
+                        Button(action: {
+                            viewModel.downgradeScore(countryToUpdate: country)
+                        }, label: {
+                            Image(systemName: "minus.circle.fill")
+                        })
+                    }
                 }
+                
                 Spacer()
                 Button(expanded ? "See less" : "See more") {
                     withAnimation {
@@ -60,6 +66,9 @@ struct CountryItem: View {
 
 struct CountryCell_Previews: PreviewProvider {
     static var previews: some View {
-        CountryItem(country: europeanCountries[0], viewModel: CountriesViewModel())
+        CountryItem(
+            country: europeanCountries[0],
+            viewModel: CountriesViewModel()
+        ).environmentObject(UserSettings())
     }
 }

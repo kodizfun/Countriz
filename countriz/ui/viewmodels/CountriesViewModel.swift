@@ -29,4 +29,15 @@ class CountriesViewModel: ObservableObject {
             countries[index].score -= 1
         }
     }
+    
+    func toggleFavorites(countryToUpdate: Country) {
+        let index = countries.firstIndex(where: { country in
+            countryToUpdate.code == country.code
+        })
+        
+        if let index {
+            countries[index].isFavorite.toggle()
+        }
+    }
+    
 }

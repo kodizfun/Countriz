@@ -16,6 +16,8 @@
 		12A163BD28FAA6160088DD2D /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A163BC28FAA6160088DD2D /* CountryItem.swift */; };
 		12A163C028FAA83B0088DD2D /* CountryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A163BF28FAA83B0088DD2D /* CountryDetails.swift */; };
 		12A163C328FAB01D0088DD2D /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A163C228FAB01D0088DD2D /* CountriesViewModel.swift */; };
+		12E7292928FDC24B009F4228 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E7292828FDC24B009F4228 /* SettingsView.swift */; };
+		12E7292B28FDC492009F4228 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E7292A28FDC492009F4228 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		12A163BC28FAA6160088DD2D /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
 		12A163BF28FAA83B0088DD2D /* CountryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetails.swift; sourceTree = "<group>"; };
 		12A163C228FAB01D0088DD2D /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		12E7292828FDC24B009F4228 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		12E7292A28FDC492009F4228 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		12A163B728FAA5250088DD2D /* data */ = {
 			isa = PBXGroup;
 			children = (
+				12E7292A28FDC492009F4228 /* UserSettings.swift */,
 				12A163B828FAA5420088DD2D /* countries.swift */,
 			);
 			path = data;
@@ -110,6 +115,7 @@
 			children = (
 				12A163AB28FAA4200088DD2D /* ContentView.swift */,
 				12A163BF28FAA83B0088DD2D /* CountryDetails.swift */,
+				12E7292828FDC24B009F4228 /* SettingsView.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -193,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				12A163BD28FAA6160088DD2D /* CountryItem.swift in Sources */,
+				12E7292928FDC24B009F4228 /* SettingsView.swift in Sources */,
 				12A163AC28FAA4200088DD2D /* ContentView.swift in Sources */,
 				12A163AA28FAA4200088DD2D /* CountrizApp.swift in Sources */,
+				12E7292B28FDC492009F4228 /* UserSettings.swift in Sources */,
 				12A163C328FAB01D0088DD2D /* CountriesViewModel.swift in Sources */,
 				12A163B928FAA5420088DD2D /* countries.swift in Sources */,
 				12A163C028FAA83B0088DD2D /* CountryDetails.swift in Sources */,
